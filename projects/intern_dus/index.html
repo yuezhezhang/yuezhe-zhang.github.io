@@ -126,6 +126,12 @@
 
 <h3 id="method">Method</h3>
 
+<p>A new sampling-based tree generating algorithm is proposed to address the issues of brute force branching tree and RRT. It is called <code class="language-plaintext highlighter-rouge">Torch</code>, because the generated tree look similar to the torch that burns fire on top.</p>
+
+<p>The tree will be generated when there is an obstacle in the way. It is initialized with certain angle \(\alpha\), field of view, and number of layeers. Compared with brute force branching, the number of samples required by <code class="language-plaintext highlighter-rouge">Torch</code> grows polynomially with the increase of number of layers, instead of exponentially. Compared with RRT, <code class="language-plaintext highlighter-rouge">Torch</code> is efficient in sampling in the nearby regions.</p>
+
+<p>At the first timestep, the algorithm involves determining the initial point, generating edges, connecting to the referenced path and selecting the optimal path.</p>
+
 <div class="row">
     <div class="col-sm mt-1 mt-md-0">
         <figure>
@@ -140,7 +146,7 @@
     <!-- Fallback to the original file -->
     <img src="/assets/img/intern/chap2-torch-1.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-  </picture><figcaption class="caption">Determine initial point</figcaption>
+  </picture><figcaption class="caption">Fig. 1. Determine initial point</figcaption>
 
 </figure>
 
@@ -158,7 +164,7 @@
     <!-- Fallback to the original file -->
     <img src="/assets/img/intern/chap2-torch-2.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-  </picture><figcaption class="caption">Generate edges</figcaption>
+  </picture><figcaption class="caption">Fig. 2. Generate edges</figcaption>
 
 </figure>
 
@@ -178,7 +184,7 @@
     <!-- Fallback to the original file -->
     <img src="/assets/img/intern/chap2-torch-3.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-  </picture><figcaption class="caption">Connect to the predefined path</figcaption>
+  </picture><figcaption class="caption">Fig. 3. Connect to the referenced path</figcaption>
 
 </figure>
 
@@ -196,13 +202,14 @@
     <!-- Fallback to the original file -->
     <img src="/assets/img/intern/chap2-torch-4.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-  </picture><figcaption class="caption">Select the optimal path</figcaption>
+  </picture><figcaption class="caption">Fig. 4. Select the optimal path</figcaption>
 
 </figure>
 
     </div>
 </div>
 
+<p>At the next timestep, when the vessel travels on one of the edges and deviates from the referenced path, the initial point will be updated, and the tree will be generated at a different direction. The following steps of connecting to the original path and selecting the optimal path remains the same.</p>
 <div class="row">
     <div class="col-sm mt-1 mt-md-0">
         <figure>
@@ -217,7 +224,7 @@
     <!-- Fallback to the original file -->
     <img src="/assets/img/intern/chap2-torch-5.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-  </picture><figcaption class="caption">Determine initial point</figcaption>
+  </picture><figcaption class="caption">Fig. 5. Determine initial point</figcaption>
 
 </figure>
 
@@ -235,7 +242,7 @@
     <!-- Fallback to the original file -->
     <img src="/assets/img/intern/chap2-torch-6.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-  </picture><figcaption class="caption">Generate edges</figcaption>
+  </picture><figcaption class="caption">Fig. 6. Generate edges</figcaption>
 
 </figure>
 
@@ -255,7 +262,7 @@
     <!-- Fallback to the original file -->
     <img src="/assets/img/intern/chap2-torch-7.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-  </picture><figcaption class="caption">Connect to the predefined path</figcaption>
+  </picture><figcaption class="caption">Fig. 7. Connect to the predefined path</figcaption>
 
 </figure>
 
@@ -273,14 +280,17 @@
     <!-- Fallback to the original file -->
     <img src="/assets/img/intern/chap2-torch-8.png" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-  </picture><figcaption class="caption">Select the optimal path</figcaption>
+  </picture><figcaption class="caption">Fig. 8. Select the optimal path</figcaption>
 
 </figure>
 
     </div>
 </div>
 
+<p>The algorithm <code class="language-plaintext highlighter-rouge">Torch</code> can also be combined with RRT in order to cover a larger sampling region. In this way, <code class="language-plaintext highlighter-rouge">Torch</code> provides a warmstart for the RRT, and RRT is generated starting from the distal layer of <code class="language-plaintext highlighter-rouge">Torch</code>. <code class="language-plaintext highlighter-rouge">Torch-RRT</code> is demonstrated in <code class="language-plaintext highlighter-rouge">Fig. 9</code> and <code class="language-plaintext highlighter-rouge">Fig. 10</code>.</p>
 <h3 id="results">Results</h3>
+
+<p>The performance of <code class="language-plaintext highlighter-rouge">Torch</code> and <code class="language-plaintext highlighter-rouge">Torch-RRT</code> is demonstrated in scenarios containing a single obstacle, a wide obstacle, a long obstacle and multiple obstacles. Tests have shown that the computational efficiency and CPU consumption of <code class="language-plaintext highlighter-rouge">Torch</code> and <code class="language-plaintext highlighter-rouge">Torch-RRT</code> outperform brute force branching and RRT.</p>
 
 <div class="row">
     <div class="col-sm mt-1 mt-md-0">
@@ -296,7 +306,7 @@
     <!-- Fallback to the original file -->
     <img src="/assets/img/intern/single_obs.gif" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-  </picture><figcaption class="caption">Circumvent a single obstacle</figcaption>
+  </picture><figcaption class="caption">Fig. 9. Circumvent a single obstacle</figcaption>
 
 </figure>
 
@@ -314,7 +324,7 @@
     <!-- Fallback to the original file -->
     <img src="/assets/img/intern/wide_obs.gif" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-  </picture><figcaption class="caption">Circumvent a wide obstacle</figcaption>
+  </picture><figcaption class="caption">Fig. 10. Circumvent a wide obstacle</figcaption>
 
 </figure>
 
@@ -334,7 +344,7 @@
     <!-- Fallback to the original file -->
     <img src="/assets/img/intern/long_obs.gif" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-  </picture><figcaption class="caption">Circumvent a wide obstacle</figcaption>
+  </picture><figcaption class="caption">Fig. 11. Circumvent a wide obstacle</figcaption>
 
 </figure>
 
@@ -352,7 +362,7 @@
     <!-- Fallback to the original file -->
     <img src="/assets/img/intern/multiple_obs.gif" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-  </picture><figcaption class="caption">Circumvent multiple obstacles</figcaption>
+  </picture><figcaption class="caption">Fig. 12. Circumvent multiple obstacles</figcaption>
 
 </figure>
 
