@@ -2,7 +2,7 @@
 layout: page
 title: Intern
 description: at Demcon Unmanned Systems
-img: assets/img/intern/cover.jpg
+img: assets/img/intern/cover_1.jpg
 importance: 1
 category: intern
 ---
