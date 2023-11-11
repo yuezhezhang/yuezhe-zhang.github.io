@@ -17,7 +17,7 @@ news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-Hey! This is Yuezhe Zhang. 
+Hey! This is Yuezhe Zhang 张越哲. 
 
 I obtained my matster degree with honours in Robotics from [TU Delft](https://www.tudelft.nl/). I worked on my thesis in [Autonomous Multi-Robots Lab](https://www.autonomousrobots.nl/) and [AIRLab Delft](https://icai.ai/airlab-delft/), under the supervision of [Dr. Javier Alonso-Mora](https://scholar.google.com/citations?user=JydqDdEAAAAJ&hl). Previously, I obtained my bachelor degree with honours in Mechatronics Engineering from [Xuteli School](https://xuteli.bit.edu.cn/english/index.htm), [Beijing Institute of Technology](https://www.bit.edu.cn/).
 
