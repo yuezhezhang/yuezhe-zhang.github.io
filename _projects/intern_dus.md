@@ -78,3 +78,6 @@ The performance of `Torch` and `Torch-RRT` is demonstrated in scenarios containi
         {% include figure.html path="assets/img/intern/multiple_obs.gif" title="example image" class="img-fluid rounded z-depth-1" caption="Fig. 12. Circumvent multiple obstacles"%}
     </div>
 </div>
+
+### Report
+The report can be found <a href="https://yuezhezhang.github.io/assets/pdf/Intern_Report.pdf">here</a>.
