@@ -160,6 +160,7 @@
 
           <!-- Links/Buttons -->
           <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
             <a href="https://sites.google.com/view/m3p2i-aip" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
           </div>
           
@@ -168,7 +169,10 @@
               <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 6px;"></span>
           </div>
 
-          
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Task and Motion Planning (TAMP) has made strides in complex manipulation tasks, yet the execution robustness of the planned solutions remains overlooked. In this work, we propose a method for reactive TAMP to cope with runtime uncertainties and disturbances. Particularly, we combine an Active Inference planner (AIP) for adaptive high-level action selection, and a novel Multi-Modal Model Predictive Path Integral controller (M3P2I) for low-level control. The AIP generates alternative symbolic plans, each linked to a cost function and samples for M3P2I. M3P2I employs a physics simulator for diverse trajectory rollouts, deriving optimal control by weighing the different samples according to their cost. This idea enables blending different robot skills for fluid and reactive plan execution, accommodating plan adjustments at both the high and low levels to cope for instance with dynamic obstacles or disturbances that invalidate the current plan. We test our approach both in simulations and real-world scenarios.</p>
+          </div>
         </div>
       </div>
 </li>
@@ -199,6 +203,7 @@
 
           <!-- Links/Buttons -->
           <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
             <a href="https://repository.tudelft.nl/islandora/object/uuid%3A4f1ae12a-376a-49e9-9837-4fc4dc3d2aa6" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
           </div>
           
@@ -207,7 +212,10 @@
               <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 6px;"></span>
           </div>
 
-          
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Task and Motion Planning (TAMP) has progressed significantly in solving intricate manipulation tasks in recent years, but the robust execution of these plans remains less touched. Particularly, generalizing to diverse geometric scenarios is still challenging during execution. In this work, we propose a reactive TAMP method to deal with disturbances and geometric ambiguities by combining an active inference planner (AIP) for online action selection with a proposed multi-modal model predictive path integral controller (M3P2I) for low-level control. The AIP generates online alternative plans, each of which is translated into a cost function to be sampled for the proposed method. The proposed M3P2I then uses a parallelizable physics simulator for throwing different rollouts, leading to a coherent optimal solution by averaging the weighted samples based on their costs. Our method empowers real-time adaptation of action sequences to rectify failed plans, while also computing low-level motions to address dynamic obstacles or disturbances that could potentially invalidate the existing plan. Theoretical findings are validated in simulation and in the real world. We show that the framework exhibits reactiveness in different scenarios, including battery charging, push-pull among obstacles, and pick-place with disturbances. We show that our framework outperforms an off-the-shelf RL method in the reactive pick-place task in terms of position error and orientation error. We also show that M3P2I is generalizable in combining different constraints, such as generating hybrid motions of push and pull for the mobile robot, and grasping objects with different grasping poses. The real-world experiments show that the system exhibits reactiveness and robustness against human disturbances in a variety of manipulation tasks.</p>
+          </div>
         </div>
       </div>
 </li>
@@ -238,6 +246,7 @@
 
           <!-- Links/Buttons -->
           <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
             <a href="/assets/pdf/Literature_Report.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
           </div>
           
@@ -246,7 +255,10 @@
               <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 6px;"></span>
           </div>
 
-          
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Over the last decades, the task planning community has concentrated on solving planning problems in discrete domains from a high-level perspective and has developed many effective, domain-independent search algorithms to generate a plan skeleton or a sequence of actions for the robot to achieve some goals. Research in motion planning, on the other hand, has focused on generating collision-free trajectories in configuration space from a low-level perspective. However, considering a pre-computed action skeleton and collision-free trajectories separately is ineffective, especially when the robot is operating in unstructured human-centered environments and the high-level actions could vary depending on the low-level motion states and changing environments. Consequently, in order for the robot to complete complex tasks in unstructured environments, planning needs to formulate the discrete high-level actions and continuous low-level motions in an integrated way. This introduces the problem of Task and Motion Planning (TAMP). The state-of-the-art TAMP approaches consider planning in a static space that encompasses many objects. Some focus on designing interdependence layers that connect task planning and motion planning. However, less attention is paid to generating reactive behaviors in a dynamic and uncertain environment where unexpected disturbances may influence the planning solutions. Therefore, this literature survey reviews the state-of-the-art task and motion planning techniques for mobile manipulation, and special focus is paid to generating versatile reactive behaviors and efficient motion planning techniques in multi-task, contact-rich, uncertain, and dynamic environments. In the research proposal, the proposed control scheme could provide adaptability at the task level through online decision making, as well as low-level reactiveness by means of a parallel sampling motion planner.</p>
+          </div>
         </div>
       </div>
 </li>
@@ -281,6 +293,7 @@
 
           <!-- Links/Buttons -->
           <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
             <a href="/assets/pdf/Intern_Report.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
           </div>
           
@@ -289,7 +302,10 @@
               <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 6px;"></span>
           </div>
 
-          
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Demcon Unmanned Systems manufactures and supplies unmanned vessels with autonomous capabilities. The vessels are equipped with sensors like LiDAR and GPS to build a mapping of the environment. Currently, a mission planner is used to specify the start and goal positions and the predefined path by the user, which requires the path planner to generate a safe and effective path avoiding the potential obstacles and following the predefined path. However, the current using Brute Force Branching and RRT algorithms in the path planner encounter issues in terms of computational efficiency and circumventing large obstacles. Therefore, The aim of this intern project is to design an efficient real-time sampling based path planning algorithm for the path tracking of unmanned vessels. The proposed algorithm Torch can grow with specified parameters, including FoV, edge angle, edge length, and number of layers. The new structure allows the required samples to grow polynomially with the increase of number of layers, which addresses the exponential growth issue of Brute Force Branching. The algorithm can also be combined with RRT to reach further area, where the torch structure provides a warm start for the RRT and alleviates the stochastic inconsistent issue of RRT, which is beneficial when circumventing wide and long obstacles. Tests were conducted in the CoppeliaSim Simimulator and ROS environment. The performance of three algorithms including Torch, Brute Force Branching and RRT is combined in static scenarios containing single obstacle, wide obstacle, long obstacle and multiple obstacles. Tests have shown that Torch algorithm can avoid single obstacles with fewer number of samples than the other two algorithms. The computational efficiency and CPU consumption of Torch also outperforms the other two algorithms.</p>
+          </div>
         </div>
       </div>
 </li>
@@ -320,6 +336,7 @@
 
           <!-- Links/Buttons -->
           <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
             <a href="https://www.researchgate.net/publication/359802991_TIAGo_A_Sorting_Robot_for_Hagelslag" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
           </div>
           
@@ -328,7 +345,10 @@
               <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 6px;"></span>
           </div>
 
-          
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>The promising future of retail automation requires the robots to use a variety of skills to perceive the environment, navigate around it and manipulate objects. Equipped with symbolic knowledge using Planning Domain Definition Language (PDDL), our robot TIAGo, can sort among empty and full hagelsag and place them to the shelf or drop them to the basket in ROS simulation. Our simulation has shown that both grippers can perform the actions of pick, place and discard independently and the system can also cope with the situation when new products are added to the environment without any changes to the framework other than the information to the knowledge base.</p>
+          </div>
         </div>
       </div>
 </li>
@@ -372,7 +392,9 @@
 
           <!-- Links/Buttons -->
           <div class="links">
+            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
             <a href="https://www.researchgate.net/publication/375556760_Planning_Algorithm_for_a_Quadrotor_Drone" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
+            <a href="https://github.com/Ruben-MR/Quadrotor_3D_planning_control" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">CODE</a>
           </div>
           
           <div class="badges">
@@ -380,7 +402,10 @@
               <span class="__dimensions_badge_embed__" data-pmid="" data-hide-zero-citations="true" data-style="small_rectangle" data-legend="hover-right" style="margin-bottom: 6px;"></span>
           </div>
 
-          
+          <!-- Hidden abstract block -->
+          <div class="abstract hidden">
+            <p>Micro-Aerial-Vehicles are expected to increase in autonomy and utility in the near future. In addition to moving among buildings, they sometimes need to access indoor spaces. In the present document, the study of motion planning for such a transition is developed, for which a reference path will be computed and smoothed. Also, non-linear model predictive control is used for tracking and local obstacle avoidance.</p>
+          </div>
         </div>
       </div>
 </li>
